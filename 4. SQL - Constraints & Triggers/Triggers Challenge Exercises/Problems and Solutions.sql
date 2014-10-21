@@ -1,7 +1,7 @@
-Q1  (3 points possible)
+/* Q1  (3 points possible)
 Write one or more triggers to maintain symmetry in friend relationships. Specifically, if (A,B) is deleted from Friend, then (B,A) should be deleted too. If (A,B) is inserted into Friend then (B,A) should be inserted too. Don't worry about updates to the Friend table. 
 Your triggers are created in SQLite, so you must conform to the trigger constructs supported by SQLite.
-To create more than one trigger, separate the triggers with a vertical bar (|).
+To create more than one trigger, separate the triggers with a vertical bar (|). */
 
 CREATE trigger symmetry1
 after insert on Friend
@@ -17,10 +17,10 @@ begin
     delete from Friend where id1 = old.id2 and id2 = old.id1;
 end;
 
-Q2  (3 points possible)
+/* Q2  (3 points possible)
 Write a trigger that automatically deletes students when they graduate, i.e., when their grade is updated to exceed 12. In addition, write a trigger so when a student is moved ahead one grade, then so are all of his or her friends. 
 Your triggers are created in SQLite, so you must conform to the trigger constructs supported by SQLite.
-To create more than one trigger, separate the triggers with a vertical bar (|).
+To create more than one trigger, separate the triggers with a vertical bar (|). */
 
 CREATE trigger grad
 after update on Highschooler
@@ -41,9 +41,9 @@ begin
                                      where id1 = new.id);
 end;
 
-Q3  (3 points possible)
+/* Q3  (3 points possible)
 Write a trigger to enforce the following behavior: If A liked B but is updated to A liking C instead, and B and C were friends, make B and C no longer friends. Don't forget to delete the friendship in both directions, and make sure the trigger only runs when the "liked" (ID2) person is changed but the "liking" (ID1) person is not changed. 
-Your triggers are created in SQLite, so you must conform to the trigger constructs supported by SQLite.
+Your triggers are created in SQLite, so you must conform to the trigger constructs supported by SQLite. */
 
 CREATE trigger feud
 after update on Likes
