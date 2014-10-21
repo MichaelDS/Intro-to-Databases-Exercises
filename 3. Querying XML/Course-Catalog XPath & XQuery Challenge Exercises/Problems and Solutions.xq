@@ -1,5 +1,5 @@
-/* Q1  (3.0/3.0 points)
-Return the title of the course with the largest enrollment.  */
+(: Q1  (3.0/3.0 points)
+Return the title of the course with the largest enrollment.  :)
 
 doc("courses.xml")//Course[@Enrollment = max(doc("courses.xml")//Course/@Enrollment)]/Title
 
