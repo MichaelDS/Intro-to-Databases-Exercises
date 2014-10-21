@@ -1,4 +1,4 @@
-Q1  (2.0/2.0 points)
+<!-- Q1  (2.0/2.0 points)
 Return a list of department titles. 
 Your solution should fill in the following stylesheet: 
 <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -8,7 +8,7 @@ Your solution should fill in the following stylesheet:
         </xsl:template>
         ... more templates as needed ...
     </xsl:stylesheet>
-Note: You do not need to use "doc(..)" in your solution. It will be executed on courses.xml. 
+Note: You do not need to use "doc(..)" in your solution. It will be executed on courses.xml.  -->
 
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="Department">
@@ -16,7 +16,7 @@ Note: You do not need to use "doc(..)" in your solution. It will be executed on 
     </xsl:template>
 </xsl:stylesheet>
 
-Q2  (2.0/2.0 points)
+<!-- Q2  (2.0/2.0 points)
 Return a list of department elements with no attributes and two subelements each: the department title and the entire Chair subelement structure. 
 Your solution should fill in the following stylesheet: 
 <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -26,7 +26,7 @@ Your solution should fill in the following stylesheet:
         </xsl:template>
         ... more templates as needed ...
     </xsl:stylesheet>
-Note: You do not need to use "doc(..)" in your solution. It will be executed on courses.xml. 
+Note: You do not need to use "doc(..)" in your solution. It will be executed on courses.xml. -->
 
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:template match="Department">
